@@ -2,6 +2,7 @@
 .env
 .venv-todo
 __pycache__
+development.py
 
 # Frontend
 node_modules
