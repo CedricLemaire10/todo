@@ -1,0 +1,123 @@
+/* STYLE GLOBAL */
+
+body {
+  color: rgb(30, 30, 30);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+input,
+select {
+  flex: 1;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid rgb(50, 50, 50);
+  border-radius: 3px;
+}
+
+input:hover,
+select:hover {
+  border: 1px solid green;
+}
+
+input:focus,
+select:focus {
+  border: 1px solid rgb(0, 160, 0);
+  outline: 1px solid rgb(0, 160, 0);
+}
+
+button {
+  color: white;
+  background: green;
+  border: none;
+  border-radius: 5px;
+  padding: 0 15px 0 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  color: white;
+  background: rgb(0, 160, 0);
+}
+
+button:active {
+  background-color: chartreuse;
+}
+
+/* STYLES SPECIFIQUES */
+
+#category-input {
+  flex: 1;
+  margin-right: 20px;
+}
+
+#category-filter {
+  height: 40px;
+}
+
+#task-input {
+  width: 100%;
+  margin-right: 20px;
+}
+
+.form-error {
+  border-color: red;
+  border-width: 2px;
+}
+
+.no-v-margin {
+  display:grid;
+  grid-template-columns: 1fr 1fr 70px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0;
+}
+
+#category-selector {
+  margin-right: 20px;
+}
+
+#task-list {
+  display: block;
+}
+
+.task-line {
+  display: grid;
+  grid-template-columns: 10% 70% 20%;
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.task-line-elem {
+  margin: 5px;
+  padding: 10px;
+  align-self: center;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  height: 20px;
+  outline: none;
+}
+
+.text-error {
+  text-align: left;
+  font-size: small;
+  font-weight: bold;
+  color: red;
+  margin: 0;
+}
