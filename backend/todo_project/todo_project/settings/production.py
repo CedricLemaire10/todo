@@ -39,3 +39,17 @@ MAILERS = {
         # configuration SMTP...
     },
 }
+
+# Sentry debug log 
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
+SENTRY_DSN = os.environ.get('SENTRY_DSN')
+
+if SENTRY_DSN:
+    sentry_sdk.init(
+        dsn=SENTRY_DSN,
+        integrations=[DjangoIntegration()],
+        traces_sample_rate=1.0, # Capture 100% des transactions pour le monitoring de perf.
+        send_default_pii=True
+    )

@@ -7,7 +7,8 @@ from .views import (
     CategoryListCreate,
     TaskViewset,
     railway_test,
-    health_check
+    health_check,
+    trigger_error
 )
 
 router = routers.DefaultRouter()
@@ -18,4 +19,5 @@ urlpatterns = [
     path('', include(router.urls)),
     path('test-railway/', railway_test, name='railway_test'),
     path('health/', health_check, name='health_check'),
+    path('error/', trigger_error, name='trigger_error'), # Ajoutez la route de test
 ]
