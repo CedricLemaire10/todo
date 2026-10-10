@@ -1,4 +1,5 @@
 from rest_framework import viewsets, mixins, generics
+from django.http import JsonResponse
 
 from .models import Category, Task
 from .serializers import CategorySerializer, TaskSerializer
@@ -35,3 +36,7 @@ class TaskViewset(viewsets.ModelViewSet):
     """
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+
+def railway_test(request):
+    """Une vue simple pour valider le déploiement sur Railway."""
+    return JsonResponse({"message": "API déployée avec succès sur Railway !"})
