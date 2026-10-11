@@ -20,8 +20,9 @@ function App() {
   const [taskError, setTaskError] = useState(null);
   const [categorySelectError, setCategorySelectError] = useState(null);
 
-  const categoriesApiUrl = "https://localhost:8000/api/categories/";
-  const tasksApiUrl = "https://localhost:8000/api/tasks/";
+  const baseApiUrl = process.env.REACT_APP_API_URL;
+  const categoriesApiUrl = `${baseApiUrl}/api/categories/`;
+  const tasksApiUrl = `${baseApiUrl}/api/tasks/`;
 
   // let apiCategories = [];
   // let apiTasks = [];

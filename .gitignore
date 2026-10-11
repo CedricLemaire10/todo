@@ -7,6 +7,7 @@ development.py
 
 # Frontend
 node_modules
+build
 
 # DB
 db.sqlite3
