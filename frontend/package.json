@@ -5,6 +5,7 @@
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
+    "@sentry/react": "^11.7.0",
     "axios": "^1.19.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

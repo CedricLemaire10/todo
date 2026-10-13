@@ -7,6 +7,7 @@ import TaskManager from "./components/TaskManager";
 import TaskLine from "./components/TaskLine";
 import {ApiFetcher, errorManager} from "./components/ApiManager";
 
+import * as Sentry from '@sentry/react';
 
 function App() {
   // Variables principales de l'app
@@ -240,6 +241,13 @@ function App() {
         sinon on affiche un simple <p> */}
         {showTaskList()}
       </section>
+      <button
+        onClick={() => {
+          throw new Error('This is your first error!');
+        }}
+      >
+        Break the world
+      </button>
     </>
   );
 }
