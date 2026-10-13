@@ -7,8 +7,6 @@ import TaskManager from "./components/TaskManager";
 import TaskLine from "./components/TaskLine";
 import {ApiFetcher, errorManager} from "./components/ApiManager";
 
-import * as Sentry from '@sentry/react';
-
 function App() {
   // Variables principales de l'app
   const [isLoading, setIsLoading] = useState(true);
