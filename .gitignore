@@ -1,6 +1,6 @@
 # Backend
 .env
-.env-*
+.env.*
 .venv-todo
 __pycache__
 development.py
