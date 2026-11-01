@@ -59,6 +59,11 @@ button:active {
   background-color: chartreuse;
 }
 
+button:disabled {
+  background-color: gray;
+  cursor: default;
+}
+
 /* STYLES SPECIFIQUES */
 
 #category-input {

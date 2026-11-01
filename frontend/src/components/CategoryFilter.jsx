@@ -7,7 +7,10 @@ function CategoryFilter(props) {
   // Affichage du composant
   return (
     <section id="category-filter">
-      <select onChange={(e) => selectFilter(e.target.value)}>
+      <select 
+        onChange={(e) => selectFilter(e.target.value)}
+        data-cy="cat-filter-select"
+        >
         <option value="">Toutes les catégories</option>
         {props.categories.map((cat) => (
           <option key={cat.id} value={cat.id}>

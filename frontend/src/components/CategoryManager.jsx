@@ -24,9 +24,15 @@ function CategoryManager(props) {
           value={category}
           onChange={(e) => setCategory(e.target.value)}
           placeholder="Nouvelle catégorie"
+          data-cy="cat-input"
         />
 
-        <button id="category-add" onClick={(e) => addCategory(category)}>
+        <button 
+          id="category-add" 
+          onClick={(e) => addCategory(category)}
+          disabled={!category.trim()}
+          data-cy="cat-add-button"
+        >
           Ajouter catégorie
         </button>
       </section>

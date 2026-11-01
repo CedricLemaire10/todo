@@ -26,12 +26,14 @@ function TaskManager(props) {
           placeholder="Nouvelle tâche"
           value={task}
           onChange={(e) => setTask(e.target.value)}
+          data-cy="task-input"
         />
 
 
         <select 
           id="category-selector"
           className={`${categorySelectError ? "form-error" : ""}`}
+          data-cy="task-cat-select"
         >
           {categories.length == 0 ? (
             <option value="" placeholder="Sélectionner une catégorie">
@@ -46,7 +48,11 @@ function TaskManager(props) {
           )}
         </select>
 
-        <button id="add-task-button" onClick={(e) => addTask(task)}>
+        <button 
+          id="add-task-button"
+          onClick={(e) => addTask(task)}
+          data-cy="task-add-button"
+        >
           Ajouter
         </button>
 

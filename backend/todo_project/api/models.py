@@ -22,3 +22,7 @@ class Task(models.Model):
         if len(self.description) >= 15:
             return self.description[:15] + "..."
         return self.description
+
+    def mark_as_complete(self):
+        self.is_completed = True
+        self.save()

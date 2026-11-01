@@ -1,5 +1,6 @@
 from rest_framework import viewsets, mixins, generics
 from django.http import JsonResponse
+from rest_framework.permissions import IsAuthenticated
 
 from .models import Category, Task
 from .serializers import CategorySerializer, TaskSerializer
@@ -19,6 +20,7 @@ class CategoryListCreate(
 
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    permission_classes = [IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
         return self.list(request, *args, **kwargs)
@@ -36,6 +38,7 @@ class TaskViewset(viewsets.ModelViewSet):
     """
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+    permission_classes = [IsAuthenticated]
 
 def railway_test(request):
     """Une vue simple pour valider le déploiement sur Railway."""

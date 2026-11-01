@@ -47,7 +47,7 @@ function TaskLine(props) {
 
   // Gestion de la suppression de la tache
   const deleteTask = () => {
-    props.onDeleteTask(props.task.id);
+    onDeleteTask(task.id);
     console.log("deleted");
   };
 
@@ -66,10 +66,15 @@ function TaskLine(props) {
           color: checkState.color,
           textDecoration: checkState.deco,
         }}
+        data-cy={`task-line-${task.description.replace(/\s+/g, "-")}`}
       >
-        {props.task.description} ({getCategoryFromId()})
+        {task.description} ({getCategoryFromId()})
       </p>
-      <button className="task-line-elem" onClick={deleteTask}>
+      <button
+        className="task-line-elem"
+        onClick={deleteTask}
+        data-cy="task-delete-button"
+      >
         Supprimer
       </button>
     </div>
