@@ -34,8 +34,8 @@ jobs:
       - name: 4. Installation des dépendances
         working-directory: ./backend/todo_project
         run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
         
         # - name: 5.Exécution du linter
         #   run: flake8 .
