@@ -2,19 +2,18 @@ from django.conf import settings
 from django.contrib.auth import authenticate, get_user_model
 from django.http import JsonResponse
 from django.middleware.csrf import get_token
+from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import (
     csrf_protect,
     ensure_csrf_cookie,
 )
-from django.utils.decorators import method_decorator
-
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework.permissions import AllowAny
 from rest_framework import status
-
-from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
+from rest_framework.views import APIView
 from rest_framework_simplejwt.exceptions import TokenError
+from rest_framework_simplejwt.tokens import RefreshToken
+
 
 def set_refresh_cookie(response, refresh_token):
     response.set_cookie(
