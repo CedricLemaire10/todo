@@ -13,6 +13,8 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.11"] # On peut tester sur plusieurs versions ici
+    env:
+      SECRET_KEY: ${{ secrets.SECRET_KEY }}
 
     steps:
       - name: 1. Checkout du code
