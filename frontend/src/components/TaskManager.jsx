@@ -50,7 +50,7 @@ function TaskManager(props) {
 
         <button 
           id="add-task-button"
-          onClick={(e) => addTask(task)}
+          onClick={() => addTask(task)}
           data-cy="task-add-button"
         >
           Ajouter

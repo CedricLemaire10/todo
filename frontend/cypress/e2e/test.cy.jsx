@@ -1,3 +1,5 @@
+import { describe, it } from "vitest";
+
 // - Le test visite la page d'accueil (cy.visit('/')).
 // - Il remplit le formulaire de connexion avec les identifiants 
 // d'un vrai utilisateur de test présent dans votre BDD Django, et se connecte.

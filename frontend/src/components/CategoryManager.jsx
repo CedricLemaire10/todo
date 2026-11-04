@@ -29,7 +29,7 @@ function CategoryManager(props) {
 
         <button 
           id="category-add" 
-          onClick={(e) => addCategory(category)}
+          onClick={() => addCategory(category)}
           disabled={!category.trim()}
           data-cy="cat-add-button"
         >

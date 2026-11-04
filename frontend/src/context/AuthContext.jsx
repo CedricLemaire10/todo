@@ -57,6 +57,7 @@ export function AuthProvider({ children }) {
         setAccessToken(response.data.access);
 
       } catch (err) {
+        console.error(err);
         delete api.defaults.headers.common.Authorization;
         setIsAuthenticated(false);
 

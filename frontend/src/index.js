@@ -1,4 +1,3 @@
-import React from "react";
 import "./styles.css";
 import { createRoot } from "react-dom/client";
 import App from "./App";
@@ -13,9 +12,9 @@ import * as Sentry from "@sentry/react";
 // - "development" : développement local (npm start)
 // - "production" : build de production (npm run build)
 // - "test" : environnement de test
-if (process.env.NODE_ENV === "production") {
+if ( import.meta.env.NODE_ENV === "production") {
     Sentry.init({
-        dsn: process.env.REACT_APP_SENTRY_DSN, // On la charge depuis les variables d'env (ou VITE_SENTRY_DSN)
+        dsn:  import.meta.env.REACT_APP_SENTRY_DSN, // On la charge depuis les variables d'env (ou VITE_SENTRY_DSN)
         integrations: [
             // Cette intégration active le monitoring de performance.
             // Elle permet de voir, par exemple, combien de temps prennent les appels API.

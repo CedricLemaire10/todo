@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 
 import api from "../services/api";
 import CategoryManager from "../components/CategoryManager";
@@ -97,7 +96,6 @@ function TodoList() {
       setTaskError("Veuillez entrer un nom de tâche valide.");
       return false;
     }
-    const existingCat = categories.some(c => c.id === catId);
     if (!catId) {
       setCategorySelectError(
         `Veuillez d'abord sélectionner une catégorie avant d'ajouter une nouvelle tâche.`
@@ -134,7 +132,7 @@ function TodoList() {
     try {
       // Envoi des données à l'API pour DELETE
       const deleteTaskApiUrl = `${tasksApiUrl}${id}/`;
-      const response = await api.delete(deleteTaskApiUrl);
+      await api.delete(deleteTaskApiUrl);
       // Suppression de la tâche React
       const majTasks = tasks.filter((t) => t.id !== id);
       setTasks(majTasks);

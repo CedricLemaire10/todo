@@ -11,6 +11,8 @@ import { AuthProvider, useAuth } from "./context/AuthContext";
 import Login from "./pages/Login";
 import TodoList from "./pages/TodoList";
 
+import PropTypes from "prop-types";
+
 function ProtectedRoute({ children }) {
   const { isAuthenticated, isLoading } = useAuth();
 
@@ -78,3 +80,11 @@ function App() {
 }
 
 export default App;
+
+PublicRoute.PropTypes = {
+  children: PropTypes.element.isRequired
+}
+
+ProtectedRoute.PropTypes = {
+  children: PropTypes.element.isRequired
+}

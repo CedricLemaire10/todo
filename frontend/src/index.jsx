@@ -1,4 +1,3 @@
-import React from "react";
 import "./styles.css";
 import { createRoot } from "react-dom/client";
 import App from "./App";
@@ -9,11 +8,11 @@ import * as Sentry from "@sentry/react";
 // avec Vite :
 // - import.meta.env.PROD
 // - import.meta.env.DEV
-// ou (process.env.NODE_ENV === "production") fournie par React App. Les valeurs possibles sont :
+// ou ( import.meta.env.NODE_ENV === "production") fournie par React App. Les valeurs possibles sont :
 // - "development" : développement local (npm start)
 // - "production" : build de production (npm run build)
 // - "test" : environnement de test
-if (process.env.NODE_ENV === "production") {
+if ( import.meta.env.NODE_ENV === "production") {
     Sentry.init({
         dsn: import.meta.env.VITE_SENTRY_DSN, // On la charge depuis les variables d'env (ou VITE_SENTRY_DSN)
         integrations: [

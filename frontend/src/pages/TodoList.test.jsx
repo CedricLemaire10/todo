@@ -1,6 +1,5 @@
-import { render, screen, waitFor } from "@testing-library/react";
-import userEvent from '@testing-library/user-event';
-import { afterAll, beforeAll, vi } from 'vitest';
+import { render, screen } from "@testing-library/react";
+import { afterAll, beforeAll, describe, it, vi, expect } from "vitest";
 
 import * as ApiManager from '../components/ApiManager'
 import TodoList from "./TodoList";
